@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sahil malik Website</title>
+    <title>Contact Us</title>
+    <title>Our Services</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Background color for the page */
+        }
+
+   
+        .navbar {
+            background-color: #000; /* Black background color */
+            color: #e1c882; /* White text color */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px; /* Adjust height of logo as needed */
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+        .nav-links a {
+            color: #e1c882;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 5px 10px;
+        }
+
+        .nav-links a:hover {
+    background-color: #e6e314;
+  }
+
+        .search-box {
+            background-color: #ffffff; /* Dark gray background color */
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .search-box input[type="text"] {
+            border: none;
+            background-color: transparent;
+            color: #080808;
+            padding: 5px;
+        }
+        .search-box input[type="text"]::placeholder {
+            color: #070606;
+        }
+        .search-box button {
+            background-color: transparent;
+            border: none;
+            color: #060505;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .search-box button:focus {
+            outline: none;
+        }
+        .image-box {
+            position: relative;
+            margin-top: 0px;
+            text-align: center;
+        }
+        .image-box img {
+            width: 100%;
+            height: 500px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(8, 5, 5, 0.5); /* Transparent black overlay */
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .overlay h2 {
+            font-size: 50px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .overlay p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .flex-connect-box {
+            background-color: #e1c882; /* Grey background color */
+            color: #070606; /* Black text color */
+            padding: 10px 20px;
+            border-radius: 0px;
+           position: left;
+        }
+        .about-section {
+            background-color: #e1c882; /* Light brown background color */
+            padding: 0px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .about-section img {
+            width: 45%; /* Adjust image width as needed */
+            height: auto;
+            margin-right: 20px;
+        }
+        .about-section .content {
+            width: 55%;
+        }
+        .about-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #0c0b0b; /* Dark brown color */
+        }
+        .about-section p {
+            font-size: 16px;
+        }
+        .container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    text-align: left;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .column {
+    flex: 1;
+    padding: 1px;
+    background-color: #f5deb3; /* Light Brown */
+    text-align: center;
+    margin-right: 10px; /* Adding margin to create space between columns */
+  }
+  .column:last-child {
+    margin-right: 2; /* Removing margin from the last column */
+  }
+  .column img {
+    max-width: 1100px;
+    height: auto;
+  }
+  .black-box {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Set the height to control the aspect ratio */
+            overflow: hidden; /* Hide any overflow from the text overlay */
+        }
+        .panoramic-image {
+            width: 100%;
+            height: 100%; /* Ensure the image fills the container */
+            object-fit: cover; /* Cover the container while preserving the aspect ratio */
+        }
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 10px; /* Add margin to create space between subtext and link */
+        }
+        .learn-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .sub-container {
+    max-width: 800px; /* Set a max-width for the content */
+    margin: 0 auto; /* Center the content */
+  }
+  h1 {
+    color: #333333;
+    text-align: center;
+  }
+  h2 {
+    color: #333333;
+    margin-top: 40px;
+  }
+  .section {
+    display: flex;
+    justify-content: space-between;
+    background-image: radial-gradient(77);
+    margin-top: 20px;
+  }
+  .contact-form {
+    flex: 0 0 48%;
+  }
+  .location {
+    flex: 0 0 48%;
+  }
+  .contact-form h3,
+  .location h3 {
+    color: #333333;
+  }
+  .form-input {
+    margin-bottom: 10px;
+  }
+  .form-input input[type="text"],
+  .form-input input[type="email"],
+  .form-input textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .form-input textarea {
+    height: 100px;
+  }
+  .send-button {
+    background-color: rgb(234, 198, 121);
+    color: rgb(10, 2, 2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .send-button:hover {
+    background-color: #e9d877;
+  }
+  .map-container {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .map {
+    width: 100%;
+    height: 300px;
+  }
+  .contact-form h3,
+  .location h3,
+  .hours-of-operation h3 {
+    color: #333333;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .hours-table th, .hours-table td {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    text-align: center;
+  }
+  .hours-table th {
+    background-color: #f5deb3; /* light brown */
+  }
+  .footer {
+    background-color: black;
+    color: #8b4513; /* brown */
+    padding: 10px;
+    text-align: left;
+    margin-top: 20px;
+  }
+  .footer a {
+    color: #8b4513; /* brown */
+    text-decoration: underline;
+  }
+  .team-table {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-member {
+    border: 0px solid #cccccc;
+    padding: 1px;
+    background-color: #fcd490;
+  }
+  .team-member img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0px;
+  }
+  .member-info {
+    text-align: left;
+  }
+  .member-info h2 {
+    color: #0a0909;
+  }
+  .member-info h3 {
+    color: #0c0c0c;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #666666;
+  }
+  .member-info p {
+    color: #555555;
+  }
+        
+
+
+    </style>
+</head>
+<body>
+    
+    
+    <div class="navbar">
+        <div class="logo">
+            <img src="C:\Users\sahil\Desktop\web images\logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Contact</a>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <button alt="Search"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-box">
+        <img src="C:\Users\sahil\Desktop\web images\main-banner.jpg" alt="Welcome Image">
+        <div class="overlay">
+            <h2>Welcome to the Three Star</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ante ligula.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ante ligula.
+            </p>
+            <div class="flex-connect-box">
+                Connect With Us
+            </div>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <img src="C:\Users\sahil\Desktop\web images\about-us.jpg" alt="About Image">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ante ligula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ante ligula.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ante ligula.
+            </p>
+        </div>
+    </section>
+    </div>
+
+    <section>
+    <div class="container1">
+        <h1>Our Services</h1>
+        <div class="row">
+          <div class="column">
+            <img src="C:\Users\sahil\Desktop\web images\digital.jpg" alt="Digital Transformation">
+            <h2>Digital Transformation</h2>
+            <p>Description of Service 1</p>
+            <div class="black-box">Digital Plans</div>
+          </div>
+          <div class="column">
+            <img src="C:\Users\sahil\Desktop\web images\marketing.jpg" alt="Marketing">
+            <h2>Marketing</h2>
+            <p>Description of Service 2</p>
+            <div class="black-box">Marketing Plans</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="C:\Users\sahil\Desktop\web images\video.jpg" alt="Video Production">
+            <h2>Video Production</h2>
+            <p>Description of Service 3</p>
+            <div class="black-box">Video Plans</div>
+          </div>
+          <div class="column">
+            <img src="C:\Users\sahil\Desktop\web images\web.jpg" alt="Service 4">
+            <h2>Web Development</h2>
+            <p>Description of Service 4</p>
+            <div class="black-box">Web Plans</div>
+          </div>
+          <div class="column">
+            <img src="C:\Users\sahil\Desktop\web images\print.jpg" alt="Print">
+            <h2>Print</h2>
+            <p>Description of Service 5</p>
+            <div class="black-box">Priting Plans</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <img src="C:\Users\sahil\Desktop\web images\vision.jpg" alt="Panoramic Image" class="panoramic-image">
+      <div class="text-overlay">
+          <h1>Our Vision</h1>
+          <p>Subtext describing our vision goes here.</p>
+          <a href="#" class="learn-more">Learn More</a>
+      </div>
+  </div>
+
+  <div class="sub-container">
+
+    <!-- Our Team Section -->
+    <h2>Our Team</h2>
+    <div class="team-table">
+      <div class="team-member">
+        <img src="C:\Users\sahil\Desktop\web images\john.jpg" alt="Team Member 1">
+      </div>
+      <div class="team-member">
+        <div class="member-info">
+          <h2>John Doe</h2>
+          <h3>CEO and Co-Owner</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra purus in justo consequat gravida.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-info">
+          <h2>Bob Rite</h2>
+          <h3>CFO and Co-owner</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra purus in justo consequat gravida.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="C:\Users\sahil\Desktop\web images\bob.jpg" alt="Team Member 2">
+      </div>
+    </div>
+  
+    <!-- Contact Us Section -->
+    <h2>Contact Us</h2>
+    <div class="section">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3>Send us a message</h3>
+        <div class="form-input">
+          <label for="fname">Full Name</label><br>
+          <input type="text" id="fname" name="fname">
+        </div>
+        <div class="form-input">
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-input">
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <button class="send-button">Send</button>
+      </div>
+  
+      <!-- Location -->
+      <div class="location">
+        <h3>Location</h3>
+        <div class="map-container">
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13807.16312762271!2d-74.00594161542946!3d40.71277609238095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08a9!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1649229310604!5m2!1sen!2sbd" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Hours of Operation Section -->
+    <div class="hours-of-operation">
+      <h3>Hours of Operation</h3>
+      <table class="hours-table">
+        <tr>
+          <th>Days</th>
+          <th>Hours</th>
+        </tr>
+        <tr>
+          <td>Monday - Friday</td>
+          <td>9 AM - 6 PM</td>
+        </tr>
+        <tr>
+          <td>Saturday - Sunday</td>
+          <td>Closed</td>
+        </tr>
+      </table>
+    </div>
+  
+  </div>
+  
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>&copy; Copyright Three Star Media, 2020</p>
+    <p>All images are taken from <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+  </div>
+  
+</body>
+</html>
